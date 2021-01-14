@@ -37,5 +37,25 @@
 
     </PreferenceCategory>
 
+    <PreferenceCategory
+        android:title="Push message">
+
+        <!-- CheckBox-->
+        <CheckBoxPreference
+            android:key="chkBox"
+            android:title="Keep me Logged in"
+            android:summary="On/Off"
+            android:defaultValue="true"/>
+
+        <SwitchPreference
+            android:icon="@android:drawable/ic_media_play"
+            android:key="push"
+            android:title="push message"
+            android:defaultValue="false"
+            android:summary="15:00"/>
+
+
+    </PreferenceCategory>
+
 
 </PreferenceScreen>
