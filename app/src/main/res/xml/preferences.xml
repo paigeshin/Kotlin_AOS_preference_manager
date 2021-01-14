@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <PreferenceCategory
+        android:title="Login Information">
+        <!-- EditText Dialog-->
+        <EditTextPreference
+            android:key="edt_username"
+            android:title="Username"
+            android:summary="please enter your username here!"
+            android:dialogTitle="Enter your name"/>
+        <!-- EditText Dialog-->
+        <EditTextPreference
+            android:key="edt_password"
+            android:title="Password"
+            android:summary="Enter your password"
+            android:dialogTitle="Enter your password"/>
+    </PreferenceCategory>
+
+    <PreferenceCategory
+        android:title="Settings">
+
+        <!-- CheckBox-->
+        <CheckBoxPreference
+            android:key="chkBox"
+            android:title="Keep me Logged in"
+            android:summary="On/Off"
+            android:defaultValue="true"/>
+
+        <!-- List -->
+        <ListPreference
+            android:key="list"
+            android:title=""
+            android:summary="Choose your phone language here"
+            android:entries="@array/ListLanguages_Labels"
+            android:entryValues="@array/ListLanguages_Values"/>
+
+    </PreferenceCategory>
+
+
+</PreferenceScreen>

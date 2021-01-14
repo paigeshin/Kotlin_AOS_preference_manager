@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    
+    <string-array name="ListLanguages_Labels">
+        <item>Dari/Farsi</item>
+        <item>Pashto</item>
+        <item>Engligh</item>
+        <item>Hindi</item>
+        <item>Urdu</item>
+    </string-array>
+    
+    <string-array name="ListLanguages_Values">
+        <item>Dari/Farsi</item>
+        <item>Pashto</item>
+        <item>Engligh</item>
+        <item>Hindi</item>
+        <item>Urdu</item>
+    </string-array>
+    
+</resources>
