@@ -57,19 +57,15 @@ class MyPreferenceActivity : AppCompatActivity() {
             val hours = calendar.get(Calendar.HOUR_OF_DAY)
             val minutes = calendar.get(Calendar.MINUTE)
 
-            val timePickerDialog = TimePickerDialog(requireContext(), R.style.ThemeOverlay_MaterialComponents_Dialog, object: TimePickerDialog.OnTimeSetListener{
-                override fun onTimeSet(view: TimePicker?, hourOfDay: Int, minute: Int) {
-                    val calendarResult = Calendar.getInstance()
-                    calendarResult.set(Calendar.HOUR_OF_DAY, hourOfDay)
-                    calendarResult.set(Calendar.MINUTE, minute)
-                    calendarResult.timeZone = TimeZone.getDefault()
-                    val simpleDateFormat = SimpleDateFormat("k:mm a", Locale.getDefault())
-                    val time: String = simpleDateFormat.format(calendarResult.time)
+            val timePickerDialog = TimePickerDialog(requireContext(), { view, hourOfDay, minute ->
+                val calendarResult = Calendar.getInstance()
+                calendarResult.set(Calendar.HOUR_OF_DAY, hourOfDay)
+                calendarResult.set(Calendar.MINUTE, minute)
+                calendarResult.timeZone = TimeZone.getDefault()
+                val simpleDateFormat = SimpleDateFormat("a hh:mm", Locale.getDefault())
+                val time: String = simpleDateFormat.format(calendarResult.time)
 
-                    preference.summary = time
-
-                }
-
+                preference.summary = time
             }, hours, minutes, false)
 
             timePickerDialog.show()
